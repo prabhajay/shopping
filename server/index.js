@@ -4,7 +4,7 @@ const app= express();
 const cors = require("cors");
 app.use(cors());
 const bodyParser = require("body-parser")
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
